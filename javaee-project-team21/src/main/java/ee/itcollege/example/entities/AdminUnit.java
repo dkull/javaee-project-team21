@@ -52,27 +52,6 @@ import org.springframework.roo.addon.tostring.RooToString;
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date untilDate;
-
-	private String changedBy;
-    
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date changedDate;
-    
-    private String closedBy;
-    
-	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(style = "M-")
-	private Date closedDate = GeneralFunctions.notDeleted;
-	
-	public Date getClosedDate() {
-		return closedDate;
-	}
-
-	public void setClosedDate(Date closedDate) {
-		this.closedDate = closedDate;
-	}
-	
     
 	@OneToMany(mappedBy = "adminUnit")
 	private Collection<Regiment> regiments;
@@ -125,31 +104,6 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 	public void setUntilDate(Date untilDate) {
 		this.untilDate = untilDate;
-	}
-
-	
-	public String getChangedBy() {
-		return changedBy;
-	}
-
-	public void setChangedBy(String changedBy) {
-		this.changedBy = changedBy;
-	}
-
-	protected Date getChangedDate() {
-		return changedDate;
-	}
-
-	public void setChangedDate(Date changedDate) {
-		this.changedDate = changedDate;
-	}
-
-	public String getClosedBy() {
-		return closedBy;
-	}
-
-	public void setClosedBy(String closedBy) {
-		this.closedBy = closedBy;
 	}
 
 	public Collection<Regiment> getRegiments() {

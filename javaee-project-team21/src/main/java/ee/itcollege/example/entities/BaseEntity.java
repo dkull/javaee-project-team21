@@ -22,9 +22,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
  //public class BaseEntity {
 public abstract class BaseEntity {
 
-		@Id
-		@GeneratedValue(strategy = GenerationType.AUTO)
-		private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	 
 	private String openedBy;
 
@@ -32,7 +32,17 @@ public abstract class BaseEntity {
     @DateTimeFormat(style = "M-")
     private Date openedDate = getDateTime();
 	
-
+    private String changedBy;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date changedDate;
+    
+    private String closedBy;
+    
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(style = "M-")
+	private Date closedDate = GeneralFunctions.notDeleted;
 	
 	// getter & setter - ei muuda!
 	
@@ -51,7 +61,37 @@ public abstract class BaseEntity {
 	public void setOpenedDate(Date openedDate) {
 		this.openedDate = openedDate;
 	}
+	public String getChangedBy() {
+		return changedBy;
+	}
+
+	public void setChangedBy(String changedBy) {
+		this.changedBy = changedBy;
+	}
+
+	public Date getChangedDate() {
+		return changedDate;
+	}
+
+	public void setChangedDate(Date changedDate) {
+		this.changedDate = changedDate;
+	}
+
+	public String getClosedBy() {
+		return closedBy;
+	}
+
+	public void setClosedBy(String closedBy) {
+		this.closedBy = closedBy;
+	}
 	
+	public Date getClosedDate() {
+		return closedDate;
+	}
+
+	public void setClosedDate(Date closedDate) {
+		this.closedDate = closedDate;
+	}
 	@PrePersist
 	public void setCreated() {
 		String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();

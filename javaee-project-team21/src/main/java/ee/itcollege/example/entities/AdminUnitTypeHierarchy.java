@@ -32,26 +32,6 @@ private static final long serialVersionUID = 1L;
 	@NotNull
 	private String comment;
 	
-    private String changedBy;
-    
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date changedDate;
-    
-    private String closedBy;
-    
-	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(style = "M-")
-	private Date closedDate = GeneralFunctions.notDeleted;
-	
-	public Date getClosedDate() {
-		return closedDate;
-	}
-
-	public void setClosedDate(Date closedDate) {
-		this.closedDate = closedDate;
-	}
-	
 	@ManyToOne
 	private AdminUnitType adminUnitType;
 
@@ -64,30 +44,6 @@ private static final long serialVersionUID = 1L;
 
 	public void setComment(String comment) {
 		this.comment = comment;
-	}
-
-	public String getChangedBy() {
-		return changedBy;
-	}
-
-	public void setChangedBy(String changedBy) {
-		this.changedBy = changedBy;
-	}
-
-	public Date getChangedDate() {
-		return changedDate;
-	}
-
-	public void setChangedDate(Date changedDate) {
-		this.changedDate = changedDate;
-	}
-
-	public String getClosedBy() {
-		return closedBy;
-	}
-
-	public void setClosedBy(String closedBy) {
-		this.closedBy = closedBy;
 	}
 
 	public AdminUnitType getAdminUnitType() {
