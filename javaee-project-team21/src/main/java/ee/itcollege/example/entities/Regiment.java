@@ -13,6 +13,10 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
+
 import ee.itcollege.example.entities.AdminUnit;
 import javax.persistence.ManyToOne;
 import ee.itcollege.example.entities.RegimentHierarchy;
@@ -143,6 +147,13 @@ private static final long serialVersionUID = 1L;
 
 	public void setClosedBy(String closedBy) {
 		this.closedBy = closedBy;
+	}
+	
+	@Transactional
+	public void remove() {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		setClosedBy(auth.getName());
+		setClosedDate(new Date());
 	}
 
 	public AdminUnit getAdminUnit() {
