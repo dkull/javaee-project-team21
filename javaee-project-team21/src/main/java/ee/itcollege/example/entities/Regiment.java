@@ -2,6 +2,7 @@ package ee.itcollege.example.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -179,4 +180,16 @@ private static final long serialVersionUID = 1L;
 	public void setSubRegimentHierarchys(Collection<RegimentHierarchy> param) {
 	    this.subRegimentHierarchys = param;
 	}
+	
+    public static long countRegiments() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM Regiment o WHERE closedDate > curtime()", Long.class).getSingleResult();
+    }
+    
+    public static List<Regiment> findAllRegiments() {
+        return entityManager().createQuery("SELECT o FROM Regiment o WHERE closedDate > curtime()", Regiment.class).getResultList();
+    }
+    
+    public static List<Regiment> findRegimentEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM Regiment o WHERE closedDate > curtime()", Regiment.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    }
 }
