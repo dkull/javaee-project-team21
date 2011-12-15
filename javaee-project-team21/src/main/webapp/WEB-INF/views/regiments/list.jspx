@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_example_entities_Regiment" items="${regiments}" z="KD+vvFElno7COFnqu91oPGhdGg4=">
         <table:table data="${regiments}" id="l_ee_itcollege_example_entities_Regiment" path="/regiments" z="o/werlzr11S4a1x7jrEyHno32EY=">
-            <table:column id="c_ee_itcollege_example_entities_Regiment_name" property="name" z="DtaGXsi/ivYz4ZEe0s1Vmewf0fk="/>
-            <table:column id="c_ee_itcollege_example_entities_Regiment_code" property="code" z="XyrGd6SnO3n2WXQsu5ypM04YQoU="/>
-            <table:column id="c_ee_itcollege_example_entities_Regiment_comment" property="comment" z="HfJdbi7NuJWACEiuWdHnv545m6Y="/>
             <table:column id="c_ee_itcollege_example_entities_Regiment_openedBy" property="openedBy" z="BpP+ElYGZ2QTOtfVmZWEw3pN1/I="/>
             <table:column date="true" dateTimePattern="${regiment_openeddate_date_format}" id="c_ee_itcollege_example_entities_Regiment_openedDate" property="openedDate" z="7j5IkE2zkLFrWhI+PAceVEyDLEU="/>
             <table:column date="true" dateTimePattern="${regiment_closeddate_date_format}" id="c_ee_itcollege_example_entities_Regiment_closedDate" property="closedDate" z="sQ75Sv8h/Omze7velSUj+o/LLaY="/>
+            <table:column id="c_ee_itcollege_example_entities_Regiment_changedBy" property="changedBy" z="s8A2Fxl3Ol8/DHigIlVpvFP2osg="/>
+            <table:column date="true" dateTimePattern="${regiment_changeddate_date_format}" id="c_ee_itcollege_example_entities_Regiment_changedDate" property="changedDate" z="tjmaa9TyiFWX4dEJiiQ98Z6yoKQ="/>
+            <table:column id="c_ee_itcollege_example_entities_Regiment_closedBy" property="closedBy" z="2NKqvggFWH98iPmkPw3iG6eONkI="/>
         </table:table>
     </page:list>
 </div>

@@ -17,5 +17,6 @@
         <field:select field="adminUnitType" id="c_ee_itcollege_example_entities_AdminUnit_adminUnitType" itemValue="id" items="${adminunittypes}" path="/adminunittypes" z="9kh9VZnAl8kq0fkQN+hKh8xuPVk="/>
         <field:simple field="adminUnitHierarchys" id="c_ee_itcollege_example_entities_AdminUnit_adminUnitHierarchys" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Unit Hierarchy" z="mxuRyTcZ5NgNHENvQCHdXxeubE4="/>
         <field:simple field="subUnitHierarchys" id="c_ee_itcollege_example_entities_AdminUnit_subUnitHierarchys" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Unit Hierarchy" z="o0jX17wlU+4SzDqFQMLTZtWy/uc="/>
+        <field:datetime dateTimePattern="${adminUnit_changeddate_date_format}" field="changedDate" id="c_ee_itcollege_example_entities_AdminUnit_changedDate" z="jcL+tfxYkYkPGft1QeGXZK+omt0="/>
     </form:update>
 </div>

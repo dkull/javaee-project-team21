@@ -29,19 +29,19 @@ public abstract class BaseEntity {
 	private String openedBy;
 
 	@Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(pattern="d.MM.yyyy")
     private Date openedDate = getDateTime();
 	
     private String changedBy;
     
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(pattern="d.MM.yyyy")
     private Date changedDate;
     
     private String closedBy;
     
 	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(style = "M-")
+    @DateTimeFormat(pattern="d.MM.yyyy")
 	private Date closedDate = GeneralFunctions.notDeleted;
 	
 	// getter & setter - ei muuda!

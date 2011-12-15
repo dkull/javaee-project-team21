@@ -30,5 +30,6 @@
         <field:display field="closedBy" id="s_ee_itcollege_example_entities_AdminUnit_closedBy" object="${adminunit}" z="wEQqbJ2TIix+ftgPyqTp0Kq4xuc="/>
         <field:display date="true" dateTimePattern="${adminUnit_closeddate_date_format}" field="closedDate" id="s_ee_itcollege_example_entities_AdminUnit_closedDate" object="${adminunit}" z="Fty1GoKYfEkL82jPjuaD9DEXWyU="/>
         <field:display field="adminUnitType" id="s_ee_itcollege_example_entities_AdminUnit_adminUnitType" object="${adminunit}" z="4Mpk1tvoQDUgiLFbaOxqtelVuzU="/>
+        <field:display date="true" dateTimePattern="${adminUnit_changeddate_date_format}" field="changedDate" id="s_ee_itcollege_example_entities_AdminUnit_changedDate" object="${adminunit}" z="amFKlHHmQUhkMah9LxnNfFlr+80="/>
     </page:show>
 </div>

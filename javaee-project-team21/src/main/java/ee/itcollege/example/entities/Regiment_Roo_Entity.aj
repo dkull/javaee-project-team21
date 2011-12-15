@@ -5,7 +5,6 @@ package ee.itcollege.example.entities;
 
 import ee.itcollege.example.entities.Regiment;
 import java.lang.Long;
-import java.util.List;
 
 privileged aspect Regiment_Roo_Entity {
     
@@ -13,4 +12,5 @@ privileged aspect Regiment_Roo_Entity {
         if (id == null) return null;
         return entityManager().find(Regiment.class, id);
     }
+    
 }

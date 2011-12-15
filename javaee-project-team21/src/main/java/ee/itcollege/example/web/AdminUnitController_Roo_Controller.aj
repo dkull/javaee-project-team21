@@ -14,8 +14,6 @@ import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.joda.time.format.DateTimeFormat;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -118,10 +116,11 @@ privileged aspect AdminUnitController_Roo_Controller {
     }
     
     void AdminUnitController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("adminUnit_openeddate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("adminUnit_closeddate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("adminUnit_fromdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("adminUnit_untildate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("adminUnit_openeddate_date_format", "d.MM.yyyy");
+        uiModel.addAttribute("adminUnit_changeddate_date_format", "d.MM.yyyy");
+        uiModel.addAttribute("adminUnit_closeddate_date_format", "d.MM.yyyy");
+        uiModel.addAttribute("adminUnit_fromdate_date_format", "d.MM.yyyy");
+        uiModel.addAttribute("adminUnit_untildate_date_format", "d.MM.yyyy");
     }
     
     String AdminUnitController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

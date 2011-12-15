@@ -7,9 +7,9 @@
             <table:column id="c_ee_itcollege_example_entities_AdminUnitType_openedBy" property="openedBy" z="DF21uhs+wJhz7EFAcF8z+7auANE="/>
             <table:column date="true" dateTimePattern="${adminUnitType_openeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnitType_openedDate" property="openedDate" z="7H5R11WvE7OV0k5dqprIR6X9FQ0="/>
             <table:column date="true" dateTimePattern="${adminUnitType_closeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnitType_closedDate" property="closedDate" z="+a0Z6FZl7jDPdyz+bDJuum8LuIQ="/>
-            <table:column id="c_ee_itcollege_example_entities_AdminUnitType_name" property="name" z="Ct9bT7gLmfcbOGWAT52g48PpE1w="/>
-            <table:column id="c_ee_itcollege_example_entities_AdminUnitType_code" property="code" z="YD2j9ALjsUw0s4Qe9X/O+psfL+k="/>
-            <table:column id="c_ee_itcollege_example_entities_AdminUnitType_comment" property="comment" z="7V6XkwtdZq4Z5CjyK8P+RgQW2v8="/>
+            <table:column id="c_ee_itcollege_example_entities_AdminUnitType_changedBy" property="changedBy" z="kk8Ovnf8wydaGj6wadSaIJpXCOc="/>
+            <table:column date="true" dateTimePattern="${adminUnitType_changeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnitType_changedDate" property="changedDate" z="FYe1bxFIA1jJebAQVlclhFXLurk="/>
+            <table:column id="c_ee_itcollege_example_entities_AdminUnitType_closedBy" property="closedBy" z="GDdlOt5U/CGfgBlHztWDNjXMImo="/>
         </table:table>
     </page:list>
 </div>

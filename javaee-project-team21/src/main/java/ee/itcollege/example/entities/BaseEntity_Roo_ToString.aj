@@ -9,6 +9,10 @@ privileged aspect BaseEntity_Roo_ToString {
     
     public String BaseEntity.toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("ChangedBy: ").append(getChangedBy()).append(", ");
+        sb.append("ChangedDate: ").append(getChangedDate()).append(", ");
+        sb.append("ClosedBy: ").append(getClosedBy()).append(", ");
+        sb.append("ClosedDate: ").append(getClosedDate()).append(", ");
         sb.append("DateTime: ").append(getDateTime()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("OpenedBy: ").append(getOpenedBy()).append(", ");

@@ -46,11 +46,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(pattern="d.MM.yyyy")
     private Date fromDate;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(pattern="d.MM.yyyy")
     private Date untilDate;
     
 	@OneToMany(mappedBy = "adminUnit")

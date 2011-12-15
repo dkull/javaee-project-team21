@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_example_entities_AdminUnit" items="${adminunits}" z="yd4AnNPEpa0759WEmT05PF2d+dU=">
         <table:table data="${adminunits}" id="l_ee_itcollege_example_entities_AdminUnit" path="/adminunits" z="eXVbLA3N0OAuOp6kY5YzHyGOVMs=">
-            <table:column id="c_ee_itcollege_example_entities_AdminUnit_name" property="name" z="dYcS+Q/mdRktl6Affw1xmeCYX/s="/>
-            <table:column id="c_ee_itcollege_example_entities_AdminUnit_code" property="code" z="gVokgrQr9DpcdqCmkiK579ktgVo="/>
-            <table:column id="c_ee_itcollege_example_entities_AdminUnit_comment" property="comment" z="Mjm5tLR1UPnKmXxj+i8u3XrnWb0="/>
             <table:column id="c_ee_itcollege_example_entities_AdminUnit_openedBy" property="openedBy" z="Pvtvx/Cy5CWP7Iv/koMorJSNSlY="/>
             <table:column date="true" dateTimePattern="${adminUnit_openeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnit_openedDate" property="openedDate" z="f9vziK1QIKWBoP2ePbxEi0Y+Kks="/>
             <table:column date="true" dateTimePattern="${adminUnit_closeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnit_closedDate" property="closedDate" z="7VFfPYPZeAaFQlwhl19JvTJUjkE="/>
+            <table:column id="c_ee_itcollege_example_entities_AdminUnit_changedBy" property="changedBy" z="8M45Gs3vj7T/7m0D1n+WUvkudiE="/>
+            <table:column date="true" dateTimePattern="${adminUnit_changeddate_date_format}" id="c_ee_itcollege_example_entities_AdminUnit_changedDate" property="changedDate" z="cXajYWVzAE8jRUVUE5gzWvIeQto="/>
+            <table:column id="c_ee_itcollege_example_entities_AdminUnit_closedBy" property="closedBy" z="QP/EROeTyQmqgCgVfba/MP3IjZY="/>
         </table:table>
     </page:list>
 </div>
